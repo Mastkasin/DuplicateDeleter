@@ -1,0 +1,23 @@
+name: Build Windows Version
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        pip install pyinstaller send2trash requests
+    - name: Build with PyInstaller
+      run: |
+        python -m PyInstaller --windowed --noconsole --onefile --name "DuplicateDeleter" DuplicateDeleter.py
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: DuplicateDeleter-Windows
+        path: dist/DuplicateDeleter.exe
