@@ -1,35 +1,30 @@
-﻿🧹 DuplicateDeleter v2.0.0
-The ultimate, lightweight tool to keep your folders clean and organized.
-DuplicateDeleter is a cross-platform desktop application designed to find and remove duplicate files safely. Version 2.0.0 introduces a smarter interface, automated scanning, and persistent memory.
+🧹 DuplicateDeleter v3.0.0
+The ultimate, lightweight background daemon to keep your folders clean and organized.
+DuplicateDeleter is a cross-platform background application designed to find and remove duplicate files safely. Version 3.0.0 introduces true Background Daemon mode with native macOS Dock support and Windows System Tray integration!
 
-✨ What's New in v2.0.0?
-🕒 Smart Auto-Cull: Set your own frequency (Seconds to Years!) and let the app clean in the background.
-🧠 Persistent Memory: The app now remembers your monitored folders and "ignored" files even after a restart.
+✨ What's New in v3.0.0?
+👻 Always-On Background Daemon: Close the dashboard window, and the app will silently keep running and monitoring your folders on the background (lives in the macOS Dock or Windows System Tray).
+🎚️ Quick Toggle: Enable or disable Auto-Cull directly from your Windows System Tray without even opening the app!
+🕒 Persistent Auto-Cull: The app remembers your timer settings. Restart the app, and it automatically resumes scanning and cleaning.
 📂 Multi-Folder Support: Monitor multiple directories simultaneously.
-🛡️ Content Hashing: Uses MD5 hashing to ensure files are identical, not just similar in name.
 
 🚀 Installation & Launch
 For macOS
 Download DuplicateDeleter.zip from the Latest Release.
-Unzip and move the app to your Applications folder.
-Important: Right-click the app and select 'Open' (first time only) to bypass the unidentified developer warning.
+Unzip and move DuplicateDeleter.app to your Applications folder.
+Important (First launch only): Right-click the app and select 'Open' to bypass the macOS unidentified developer warning safely.
+Background Usage: Closing the dashboard window with the 'X' button keeps the app active in your Dock. Click the Dock icon to bring the dashboard back to the front!
 
 For Windows
 Download DuplicateDeleter.exe from the Latest Release.
-Run the executable. No installation required!
+Important (First launch only): Because the app is from an unidentified developer (me), Windows Defender SmartScreen might show a blue "Windows protected your PC" popup. Click on "More info" and select "Run anyway" to bypass this warning safely.
+Background Usage: Closing the window with 'X' minimizes the app to your System Tray (bottom-right of your taskbar, click the ^ arrow if hidden). Right-click the purple icon to toggle Auto-Cull or close the app.
 
 🛠 Features & Safety
 Safe Deletion: Files are moved to the Trash/Recycle Bin, never permanently deleted immediately.
 100% Offline: No data ever leaves your computer. Your privacy is guaranteed.
-Ignore List: Found a duplicate you want to keep? Click 'Ignore' and the app will never ask you about it again.
-Detailed Logs: All actions are saved in DuplicateDeleter.log in your home directory for full transparency.
-
-🔒 Security & Privacy
-TLS 1.3: Secure update checks (if enabled).
-Log Management: Automatic cleanup of logs older than 30 days to save space.
-Open Source: Full transparency of the source code.
+Detailed Logs: All actions are saved in the DuplicateDeleter.log file directly in your system's Downloads folder (works across different system languages) for full transparency.
 
 ⭐ Support the Project
-If DuplicateDeleter helped you save space, please consider starring this repository! It helps other people find the tool.
-
+If DuplicateDeleter helped you save space, please consider starring this repository on GitHub! It helps other people find the tool.
 Developed with ❤️ by Mastkasin
