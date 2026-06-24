@@ -1,4 +1,4 @@
-name: Build Windows Version v3.0.0
+name: Build Windows Version v3.1.0
 on: [push]
 
 jobs:
@@ -15,9 +15,9 @@ jobs:
         pip install pyinstaller send2trash requests pystray pillow
     - name: Build with PyInstaller
       run: |
-        python -m PyInstaller --windowed --noconsole --onefile --name "DuplicateDeleter" DuplicateDeleter_v3.0.0.py
+        python -m PyInstaller --windowed --noconsole --onefile --name "DuplicateDeleter" DuplicateDeleter_v3.1.0.py
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: DuplicateDeleter-Windows-v3.0.0
+        name: DuplicateDeleter-Windows-v3.1.0
         path: dist/DuplicateDeleter.exe
