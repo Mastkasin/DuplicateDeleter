@@ -1,16 +1,16 @@
-🧹 DuplicateDeleter v3.1.0
+🧹 DuplicateDeleter v4.0.0
 
 The ultimate, lightweight background service to keep your folders clean and organized.
 
 DuplicateDeleter is a highly optimized, cross-platform background application designed to find and remove duplicate files safely. Version 3.1.0 introduces native background daemon execution, automatic system startup, and seamless OS integration.
 
-✨ What's New in v3.1.0?
+✨ What's New in v4.0.0?
 
+🎨 Major User Interface Overhaul: Completely transformed the application's look and feel with a massive UI update featuring a modern, high-contrast dark theme inspired by Google Drive for maximum visual comfort.
+🗂️ Sidebar Navigation & Multi-View Layout: Re-engineered the window structure into a sleek, responsive dual-view system, allowing seamless switching between a dedicated Homepage and a real-time Duplicates view.
+🔍 Global Log Search Engine: Added an integrated search bar within the top navigation header to instantly query, filter, and extract historical event records directly from the application log.
+🔗 Hyperlinked Interactive Logo: Embedded a smart link within the brand logo that lets you instantly visit the repository homepage with a single click, complete with fluid hover animations.
 👻 Always-On Background Daemon: Close the dashboard window, and the app will silently run and monitor your folders in the background (lives in the macOS Dock or Windows System Tray).
-⚙️ Auto-Start Service: The app automatically registers itself to launch on system boot (via macOS LaunchAgents or Windows Registry Run keys).
-🎚️ Smart Toggle: Control the entire app and its background timers directly from the menu icon.
-🛠️ Zero Resource Leaks: Completely re-engineered on macOS using isolated Pipes instead of Semaphores to ensure 100% crash-free background execution.
-📂 Multi-Folder Support: Monitor multiple directories simultaneously.
 
 🚀 Installation & Launch
 
