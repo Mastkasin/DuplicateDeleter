@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuplicateDeleter v4.0.0 - Secure & Swift Folder De-duplication</title>
+    <!-- Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for clean, modern iconography -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e1b4b 0%, #311042 50%, #0f172a 100%);
+        }
+        .blur-glow {
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
+
+    <!-- Hero Section & Downloads -->
+    <header class="relative gradient-bg py-24 px-4 overflow-hidden border-b border-slate-800">
+        <!-- Background glow effects -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full blur-glow"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-glow"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <!-- Logo / Icon -->
+            <div class="inline-flex p-4 bg-purple-500/10 rounded-3xl border border-purple-500/30 mb-6 animate-bounce">
+                <i data-lucide="trash-2" class="w-12 h-12 text-purple-400"></i>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent mb-4">
+                DuplicateDeleter v4.0.0
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Keep your directories automatically organized. A highly secure, blazing fast, and 100% offline duplicate file finder for macOS and Windows.
+            </p>
+
+            <!-- Download Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <!-- Mac Download -->
+                <a href="https://github.com/Mastkasin/DuplicateDeleter/releases/download/v4.0.0/DuplicateDeleter.zip" 
+                   class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-2xl transition-all duration-300 shadow-lg shadow-purple-600/30 hover:scale-105">
+                    <i data-lucide="apple" class="w-6 h-6"></i>
+                    <div class="text-left">
+                        <p class="text-xs opacity-75">Download for</p>
+                        <p class="text-base">macOS (.zip)</p>
+                    </div>
+                </a>
+
+                <!-- Windows Download -->
+                <a href="https://github.com/Mastkasin/DuplicateDeleter/releases/download/v4.0.0/DuplicateDeleter.exe" 
+                   class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-2xl border border-slate-700 transition-all duration-300 shadow-lg hover:scale-105">
+                    <i data-lucide="monitor" class="w-6 h-6 text-blue-400"></i>
+                    <div class="text-left">
+                        <p class="text-xs opacity-75">Download for</p>
+                        <p class="text-base">Windows (.exe)</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Features Badge -->
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+                <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> 100% Offline & Secure</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-4 h-4 text-purple-400"></i> Content Hashing (MD5)</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-4 h-4 text-blue-400"></i> Auto-Cull Timer</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Get Started Guide -->
+    <section class="py-20 px-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-3">
+            <i data-lucide="book-open" class="text-purple-400"></i> How to Use DuplicateDeleter
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center font-bold text-lg shadow-lg">1</div>
+                <h3 class="text-xl font-semibold mb-3 mt-2">Choose Folders</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Open the app and click the <strong class="text-white">"Add Folder"</strong> button. Add all the directories you want to scan. You can add as many as you like!
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center font-bold text-lg shadow-lg">2</div>
+                <h3 class="text-xl font-semibold mb-3 mt-2">Timer or Manual</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Click <strong class="text-white">"Check Now"</strong> for an instant scan, or configure the <strong class="text-white">Auto-Cull Frequency</strong> (e.g., every 10 minutes) to let the app work automatically in the background.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center font-bold text-lg shadow-lg">3</div>
+                <h3 class="text-xl font-semibold mb-3 mt-2">Merge or Ignore</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Move discovered duplicates directly to the system trash with <strong class="text-white">"Merge"</strong>. Click <strong class="text-white">"Ignore"</strong> if you want to keep a specific file duplicate on purpose.
+                </p>
+            </div>
+        </div>
+
+        <!-- OS Specific Tips -->
+        <div class="mt-12 bg-slate-800/30 border border-slate-700/30 p-6 rounded-2xl">
+            <h4 class="font-bold mb-3 text-purple-300 flex items-center gap-2"><i data-lucide="info" class="w-5 h-5"></i> Important on First Launch:</h4>
+            <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5">
+                <li><strong>macOS:</strong> On your very first launch, *right-click* the app icon and select <strong>"Open"</strong> to bypass the unidentified developer warning safely.</li>
+                <li><strong>Windows:</strong> The app is a portable `.exe` file. There is no installation required; you can run it directly from anywhere!</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Behind the Scenes -->
+    <section class="bg-slate-950 py-20 px-4 border-t border-b border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-3">
+                <i data-lucide="code-2" class="text-purple-400"></i> Behind the Scenes
+            </h2>
+            <p class="text-slate-400 text-center mb-12 max-w-xl mx-auto">
+                Discover how DuplicateDeleter makes smart, secure decisions in the background to protect your data and save storage space.
+            </p>
+
+            <div class="space-y-8">
+                <!-- How It Works 1: MD5 Hashing -->
+                <div class="flex flex-col md:flex-row gap-6 items-start bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <div class="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20 text-purple-400 shrink-0">
+                        <i data-lucide="fingerprint" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Unique Fingerprints (MD5 Hashing)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Basic duplicate finders only compare file names, which can be inaccurate and risky. DuplicateDeleter reads the actual contents of each file in small chunks and calculates a unique cryptographic hash (a digital fingerprint). Two files with different names but identical contents will always be successfully detected.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- How It Works 2: JSON Memory -->
+                <div class="flex flex-col md:flex-row gap-6 items-start bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <div class="p-3 bg-blue-500/10 rounded-xl border border-blue-500/20 text-blue-400 shrink-0">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Persistent JSON Memory</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            To ensure you don't have to re-add your monitored folders every time you open the app, it saves a tiny configuration file in your home directory: <code class="bg-slate-800 px-1.5 py-0.5 rounded text-purple-300">DuplicateDeleter_config.json</code>. This securely stores your folder list and your ignored file hashes so they are remembered forever.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- How It Works 3: Safe Deletion -->
+                <div class="flex flex-col md:flex-row gap-6 items-start bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
+                    <div class="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20 text-emerald-400 shrink-0">
+                        <i data-lucide="trash" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">No Accidental Hard Deletion</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            We value safety over everything. When you choose to "Merge", the app utilizes the <code class="bg-slate-800 px-1.5 py-0.5 rounded text-purple-300">send2trash</code> library. Files are never hard-deleted directly. Instead, they are moved to the official system Trash/Recycle Bin, meaning you can easily restore them if you change your mind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm border-t border-slate-800">
+        <p class="mb-2">DuplicateDeleter is fully Open Source and free to use.</p>
+        <p class="mb-4">Developed with ❤️ by <a href="https://github.com/Mastkasin" class="text-purple-400 hover:text-purple-300 underline">Mastkasin</a></p>
+        <div class="flex justify-center gap-4 text-xs">
+            <a href="https://github.com/Mastkasin/DuplicateDeleter" class="hover:underline flex items-center gap-1"><i data-lucide="github" class="w-3.5 h-3.5"></i> GitHub Repository</a>
+            <span>•</span>
+            <a href="https://github.com/Mastkasin/DuplicateDeleter/issues" class="hover:underline flex items-center gap-1"><i data-lucide="bug" class="w-3.5 h-3.5"></i> Report a Bug</a>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
